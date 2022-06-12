@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Item>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-5">
+            <div class="text-000 text-center">
+                <h1>INVENTORY</h1>
+            </div>
+        </div>
+        <div class="col-12 mt-5">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Item item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <img src="~/images/@item.Image" style="width:100px; height:100px; object-fit:contain" />
+                            </td>
+                            <td>@item.Name</td>
+                            <td>@item.Stock</td>
+                            <td>@item.Price$</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

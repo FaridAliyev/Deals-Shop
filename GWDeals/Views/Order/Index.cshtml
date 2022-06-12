@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Order>
+
+@section CSS{
+    <style>
+        body {
+            background: #eee;
+            font-family: Assistant, sans-serif
+        }
+
+        .cell-1 {
+            border-collapse: separate;
+            border-spacing: 0 4em;
+            background: #ffffff;
+            border-bottom: 5px solid transparent;
+            background-clip: padding-box;
+            cursor: pointer;
+        }
+
+        thead {
+            background: #dddcdc;
+        }
+
+
+        .table-elipse {
+            cursor: pointer;
+        }
+
+        #demo {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s 0.1s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .row-child {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-5">
+            <div class="text-000 text-center">
+                <h1>ORDERS</h1>
+                <h4 class="mt-5 text-success">Profit: $@ViewBag.Total</h4>
+            </div>
+        </div>
+        <div class="col-12 mt-5">
+            <div class="container mt-5">
+                <div class="d-flex justify-content-center row">
+                    <div class="col-md-10">
+                        <div class="rounded">
+                            <div class="table-responsive table-borderless">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Order #</th>
+                                            <th>Student</th>
+                                            <th>Status</th>
+                                            <th>Total</th>
+                                            <th>Created</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-body">
+                                        @foreach (Order item in Model.Reverse())
+                                        {
+                                            <tr class="cell-1" data-toggle="collapse" data-target="#s-@item.Id">
+                                                <td>@item.Id</td>
+                                                <td>@item.AppUser.Name @item.AppUser.Surname</td>
+                                                <td><span class="badge badge-danger">@item.OrderStatus.Status</span></td>
+                                                <td>$@item.OrderItems.Sum(o => o.Total)</td>
+                                                <td>@item.OrderDate?.ToString("d MMM yyyy")</td>
+                                                <td class="table-elipse" data-toggle="collapse" data-target="#s-@item.Id"><i class="fa fa-ellipsis-h text-black-50"></i></td>
+                                            </tr>
+                                            @foreach (OrderItem orderItem in item.OrderItems)
+                                            {
+                                                <tr id="s-@item.Id" class="collapse cell-1 row-child">
+                                                    <td class="text-center" colspan="1"><i class="fa fa-angle-up"></i></td>
+                                                    <td colspan="3">Product: @orderItem.Item.Name&nbsp;</td>
+                                                    <td colspan="2">QTY: @orderItem.Quantity</td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GWDeals</title>
+    <link rel="icon" type="image/png" href="~/images/fav.png">
+    <!-- ==================Start Css Link===================== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/datepicker.min.css">
+    <link rel="stylesheet" href="~/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="~/css/fontawesome.css">
+    <link rel="stylesheet" href="~/css/icofont.css">
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/slick.css">
+    <link rel="stylesheet" href="~/css/slick-theme.css">
+    <link rel="stylesheet" href="~/css/slider-range.css">
+    <link rel="stylesheet" href="~/css/select2.min.css">
+    <link rel="stylesheet" href="~/css/tippy.css">
+    <link rel="stylesheet" href="~/css/app.css">
+    @RenderSection("CSS",false)
+    <!-- ==================End Css Link===================== -->
+    <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!--
+          ================== preloder Start===================
+       -->
+
+    <div class="rt-preloder">
+        <div class="preloder-box">
+            <img src="~/images/logo.png" alt="preloder logo" draggable="false">
+        </div><!-- /.preloder-box -->
+    </div><!-- /.rt-preloder -->
+
+
+    @RenderBody()
+    <section class="rt-site-footer deafult-footer has-callto-action">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row" style="padding-top: 75px;">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="rt-single-widget wow fade-in-bottom">
+                            <p style="font-size: 30px">GW DEALS</p>
+                            <p class="f-size-18 rt-light2 f-size-lg-18">Subscribe to get the latest deals.</p>
+                            <a style="color: white;" asp-controller="Home" asp-action="Subscribe" class="rt-btn rt-gradient  text-uppercase  rt-Bshadow-2 wow fade-in-left pill"
+                               data-wow-duration="1s" data-wow-delay="0.6s">Subscribe</a><!-- /.rt-btn -->
+
+                            <ul class="rt-list rt-mt-35">
+                                <li class="d-inline-block"><a href="#" class="rt-hw-50 text-center icon-white-secondary d-block rt-circle rt-mr-4"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                                <li class="d-inline-block"><a href="#" class="rt-hw-50 text-center icon-white-secondary d-block rt-circle rt-mr-4"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                                <li class="d-inline-block"><a href="#" class="rt-hw-50 text-center icon-white-secondary d-block rt-circle rt-mr-4"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                                <li class="d-inline-block"><a href="#" class="rt-hw-50 text-center icon-white-secondary d-block rt-circle rt-mr-4"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+
+
+                        </div><!-- /.rt-single-widge -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="rt-single-widget wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.1s">
+                            <h3 class="rt-footer-title">Our Information</h3>
+                            <ul class="rt-usefulllinks2">
+                                <li><a href="#"> <i class="icofont-thin-double-right"></i>About Us</a></li>
+                                <li><a href="#"><i class="icofont-thin-double-right"></i>Contact Us</a></li>
+                                <li><a href="#"><i class="icofont-thin-double-right"></i>Customer Reviews</a></li>
+                                <li><a href="#"><i class="icofont-thin-double-right"></i>Privacy Policy</a></li>
+                                <li><a href="#"><i class="icofont-thin-double-right"></i>Business License</a></li>
+
+
+                            </ul>
+                        </div><!-- /.rt-single-widget -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="rt-single-widget wow fade-in-bottom" data-wow-duration="1.3s" data-wow-delay="0.3s">
+                            <h3 class="rt-footer-title">My Account</h3>
+                            <ul class="rt-usefulllinks2">
+                                <li><a href="#"> <i class="icofont-thin-double-right"></i>Manage Accounts</a></li>
+                                <li><a href="#"><i class="icofont-thin-double-right"></i>How to Withdraw</a></li>
+                                <li><a href="#"><i class="icofont-thin-double-right"></i>Account Varification</a></li>
+                                <li><a href="#"><i class="icofont-thin-double-right"></i>Safety & Security</a></li>
+                                <li><a href="#"><i class="icofont-thin-double-right"></i>Membership Level</a></li>
+                            </ul>
+
+                        </div><!-- /.rt-single-widget -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="rt-single-widget wow fade-in-bottom" data-wow-duration="1.6s" data-wow-delay="0.6s">
+                            <h3 class="rt-footer-title">help center</h3>
+                            <ul class="rt-usefulllinks2">
+                                <li><a href="#"> <i class="icofont-thin-double-right"></i>Help centre</a></li>
+                                <li><a href="#"><i class="icofont-thin-double-right"></i>FAQ</a></li>
+                                <li><a href="#"><i class="icofont-thin-double-right"></i>Quick Start Guide</a></li>
+                                <li><a href="#"><i class="icofont-thin-double-right"></i>Tutorials</a></li>
+                                <li><a href="#"><i class="icofont-thin-double-right"></i>Associate Blog</a></li>
+                            </ul>
+                        </div><!-- end single widget -->
+                    </div><!-- /.col-lg-4 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.footer-top -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center copy-right-text">
+                        Copyright &copy; 2022.All Rights Reserved By <a href="#" class="primary-color"> GWDeals</a>
+                    </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.footer-bottom -->
+    </section>
+
+    <!-- ==================Start Js Link===================== -->
+    <!-- ==================Start Js Link===================== -->
+    <script src="~/js/jquery-2.2.4.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/moment.min.js"></script>
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <script src="~/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/js/isotope.pkgd.min.js"></script>
+    <script src="~/js/instafeed.min.js"></script>
+    <script src="~/js/waypoints.min.js"></script>
+    <script src="~/js/jquery.counterup.min.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/jquery.scrollUp.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/TweenMax.min.js"></script>
+    <script src="~/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyCy7becgYuLwns3uumNm6WdBYkBpLfy44k"></script>
+    <script src="~/js/wow.js"></script>
+    <script src="~/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="~/js/jquery-ui.js"></script>
+    <script src="~/js/jquery.appear.js"></script>
+    <script src="~/js/select2.min.js"></script>
+    <script src="~/js/slick.min.js"></script>
+    <script src="~/js/slider-range.js"></script>
+    <script src="~/js/vivus.min.js"></script>
+    <script src="~/js/tippy.all.min.js"></script>
+    <script src="~/js/rt-paralax.js"></script>
+    <script src="~/js/app.js"></script>
+    @RenderSection("Scripts",false)
+    <!-- ==================End Js Link===================== -->
+    <!-- ==================End Js Link===================== -->
+
+
+
+
+</body>
+
+</html>

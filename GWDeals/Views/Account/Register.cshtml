@@ -1,0 +1,90 @@
+﻿@model RegisterVM
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+
+<div class="page-content-two rtbgprefix-full bg-hide-md rt-pt-130 rt-pb-130 rt-pt-lg-0 rt-pb-lg-0 bg-elements-parent"
+     style="background-image: url(images/section-bg-6.png);">
+    <div class="rt-bg-elemtnts rt-shape-ani-9">
+        <div class="spin-container">
+            <div class="shape">
+                <div class="bd border_bg-1"></div>
+            </div>
+        </div>
+    </div><!-- /.rt-shape-ani-1 -->
+    <div class="rt-bg-elemtnts rt-shape-ani-10">
+        <div class="spin-container">
+            <div class="shape">
+                <div class="bd border_bg-2"></div>
+            </div>
+        </div>
+    </div><!-- /.rt-shape-ani-1 -->
+    <div class="rt-bg-elemtnts rt-shape-ani-11">
+        <div class="spin-container">
+            <div class="shape">
+                <div class="bd border_bg-3"></div>
+            </div>
+        </div>
+    </div><!-- /.rt-shape-ani-1 -->
+    <div class="rt-bg-elemtnts rt-shape-ani-12">
+        <div class="spin-container">
+            <div class="shape">
+                <div class="bd border_bg-2"></div>
+            </div>
+        </div>
+    </div><!-- /.rt-shape-ani-1 -->
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h2 class="rt-section-title">
+                    Register
+                </h2>
+                <div class="rt-spacer-60"></div><!-- /.rt-spacer-60 -->
+                <form method="post" class="rt-form rt-line-form">
+                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                    <div class="single-in">
+                        <label asp-for="Name" class="f-size-14 text-878  text-capitalize"></label>
+                        <input asp-for="Name" class="form-control rt-mb-15">
+                        <span class="text-danger" asp-validation-for="Name"></span>
+                    </div><!-- /.single-in -->
+                    <div class="single-in">
+                        <label asp-for="Surname" class="f-size-14 text-878  text-capitalize"></label>
+                        <input asp-for="Surname" class="form-control rt-mb-15">
+                        <span class="text-danger" asp-validation-for="Surname"></span>
+                    </div><!-- /.single-in -->
+                    <div class="single-in">
+                        <label asp-for="UserName" class="f-size-14 text-878  text-capitalize"></label>
+                        <input asp-for="UserName" class="form-control rt-mb-15">
+                        <span class="text-danger" asp-validation-for="UserName"></span>
+                    </div><!-- /.single-in -->
+                    <div class="single-in">
+                        <label asp-for="Email" class="f-size-14 text-878  text-capitalize"></label>
+                        <input asp-for="Email" class="form-control rt-mb-15">
+                        <span class="text-danger" asp-validation-for="Email"></span>
+                    </div><!-- /.single-in -->
+                    <div class="single-in">
+                        <label asp-for="Password" class="f-size-14 text-878  text-capitalize"></label>
+                        <input asp-for="Password" class="form-control rt-mb-15">
+                        <span class="text-danger" asp-validation-for="Password"></span>
+                    </div><!-- /.single-in -->
+                    <div class="single-in">
+                        <label asp-for="ConfirmPassword" class="f-size-14 text-878  text-capitalize"></label>
+                        <input asp-for="ConfirmPassword" class="form-control rt-mb-30">
+                        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                        <button class="rt-icon rt-hw-66 rt-circle f-size-40 icon-dark rt-mt-20" type="submit">
+                            <i class="icofont-paper-plane"></i>
+                        </button>
+                    </div><!-- /.single-in -->
+                </form>
+            </div><!-- /.col-lg-6 -->
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.page-content -->
+
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ }
